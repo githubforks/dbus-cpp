@@ -38,7 +38,6 @@ output_dir=`pwd`
 # Write the various version numbers into a bunch of files. This allows
 # us to easily pick them up from both gen-debian-files.sh and CMakeLists.txt.
 
-distro=$(lsb_release -c -s)
 
 full_version=$(cat "${dir}"/VERSION)
 
@@ -47,17 +46,7 @@ minor=$(echo $full_version | cut -d'.' -f2)
 micro=$(echo $full_version | cut -d'.' -f3)
 major_minor="${major}.${minor}"
 
-vivid_full_version=$(cat "${dir}"/VERSION.vivid)
-vivid_major=$(echo $vivid_full_version | cut -d'.' -f1)
-vivid_soversion=$vivid_major
-
-if [ "$distro" = "vivid" ]
-then
-    soversion=${vivid_soversion}
-else
-    soversion="${major}"
-fi
-[ -n $soversion ]
+soversion="${major}"
 
 echo ${full_version} >${output_dir}/libdbus-cpp.full-version
 echo ${major} >${output_dir}/libdbus-cpp.major-version

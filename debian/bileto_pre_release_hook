@@ -42,7 +42,6 @@ dir=$1
 version_dir=$(mktemp -d)
 
 [ -n "$dir" ] || dir="./debian"
-[ -n "$SERIES" ] || SERIES="$(lsb_release -c -s)"
 
 # Dump version numbers into files and initialize vars from those files.
 sh ${dir}/get-versions.sh ${dir} ${version_dir}

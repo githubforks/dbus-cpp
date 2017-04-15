@@ -10,16 +10,13 @@ Build-Depends: cmake,
                dbus,
                debhelper (>= 9),
                doxygen,
-               google-mock,
                libboost-filesystem-dev,
                libboost-system-dev,
                libboost-program-options-dev,
                libdbus-1-dev,
-               libgtest-dev,
                libprocess-cpp-dev,
                libproperties-cpp-dev,
                libxml2-dev,
-               lsb-release,
 Standards-Version: 3.9.5
 Section: libs
 Homepage: http://launchpad.net/dbus-cpp
