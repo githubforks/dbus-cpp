@@ -1,0 +1,22 @@
+From: Shengjing Zhu <i@zhsj.me>
+Date: Sat, 24 Jun 2017 16:52:39 +0800
+Subject: fix c++11 variadic macro warning
+
+ISO C++11 requires at least one argument for the "..." in a variadic
+macro
+
+Signed-off-by: Shengjing Zhu <i@zhsj.me>
+---
+ tests/message_test.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/message_test.cpp b/tests/message_test.cpp
+index c9423ac..5fe8a50 100644
+--- a/tests/message_test.cpp
++++ b/tests/message_test.cpp
+@@ -194,4 +194,4 @@ INSTANTIATE_TEST_CASE_P(MessageType, MessageType, ::testing::Values(
+                             std::make_pair(core::dbus::Message::Type::invalid, "invalid"),
+                             std::make_pair(core::dbus::Message::Type::method_call, "method_call"),
+                             std::make_pair(core::dbus::Message::Type::method_return, "method_return"),
+-                            std::make_pair(core::dbus::Message::Type::signal, "signal")));
++                            std::make_pair(core::dbus::Message::Type::signal, "signal")),);

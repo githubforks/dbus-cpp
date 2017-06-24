@@ -1,6 +1,13 @@
+dbus-cpp (5.0.0~git20160809-2) stretch; urgency=medium
+
+  * enable tests
+  * update policy to 4.0.0
+
+ -- Shengjing Zhu <i@zhsj.me>  Sat, 24 Jun 2017 15:31:27 +0800
+
 dbus-cpp (5.0.0~git20160809-1) unstable; urgency=medium
 
- * Release to debian
+  * Release to debian
 
  -- Shengjing Zhu <i@zhsj.me>  Sat, 15 Apr 2017 11:17:00 +0000
 

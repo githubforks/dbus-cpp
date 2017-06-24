@@ -1,1 +1,3 @@
-0001-disable-tests.patch
+0001-Fix-support-for-googletest.patch
+0002-fix-c-11-variadic-macro-warning.patch
+0003-fix-unsigned-integer-comparison-warning.patch

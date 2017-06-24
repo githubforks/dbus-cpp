@@ -1,0 +1,24 @@
+From: Shengjing Zhu <i@zhsj.me>
+Date: Sat, 24 Jun 2017 16:53:35 +0800
+Subject: fix unsigned integer comparison warning
+
+comparison between signed and unsigned integer expressions
+
+Signed-off-by: Shengjing Zhu <i@zhsj.me>
+---
+ tests/service_test.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/service_test.cpp b/tests/service_test.cpp
+index 5b454f1..63219f2 100644
+--- a/tests/service_test.cpp
++++ b/tests/service_test.cpp
+@@ -134,7 +134,7 @@ TEST_F(Service, AddingServiceAndObjectAndCallingIntoItSucceeds)
+             });
+ 
+             auto readonly_property = stub->get_property<test::Service::Properties::ReadOnly>();
+-            EXPECT_EQ(readonly_property->get(), 7);
++            EXPECT_EQ(readonly_property->get(), 7u);
+             std::uint32_t changed_value = 0;
+             readonly_property->changed().connect([&changed_value](std::uint32_t value){
+                 changed_value = value;
